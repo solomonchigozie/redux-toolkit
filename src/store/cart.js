@@ -1,10 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 
 
 const initialState  = {
     count : 0,
     isProductInsideCart : false
 }
+
 const slice = createSlice({
     name :'cartState',
     initialState,
@@ -21,6 +22,11 @@ const slice = createSlice({
     }
 })
 
+
+export const getCartState = createSelector(
+    (state)=>{return state},
+    (cartState)=>{return cartState}
+)
 
 //store, action, reducer
 export const  {updateProductInsideCart, updateItemCount} = slice.actions

@@ -6,7 +6,7 @@ const AddToCartBtn = ({isDisabled, onClick}) => {
         ? 'my-5 p-2 bg-blue-400 text-white'
         :'my-5 p-2 bg-blue-100 text-white'
   return (
-    <button onClick={onclick} disabled={isDisabled} className={className}>
+    <button onClick={onClick} disabled={isDisabled} className={className}>
         Add to cart
     </button>
   )
